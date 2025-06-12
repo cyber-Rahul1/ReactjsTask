@@ -1,6 +1,7 @@
 import { useContext, useEffect, useRef, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { DataContext } from "../context/ContextProvider"
+import { IoIosArrowBack } from "react-icons/io";
 
 
 const Signup = () => {
@@ -103,7 +104,8 @@ const Signup = () => {
 
     return (
         <div className="w-screen h-screen bg-[#ffffff] flex flex-col justify-center items-center">
-            <div className="md:bg-[#f7f8f9] h-[90vh] md:h-[89vh] flex flex-col justify-start py-10 px-auto md:px-5">
+            <div className="md:bg-[#f7f8f9] h-[90vh] md:h-[89vh] flex flex-col justify-start py-10  px-auto md:px-5 relative">
+                <IoIosArrowBack  size={22} onClick={() => navigate("/")} className="absolute cursor-pointer text-gray-500 md:-top-0 -top-2 md:-left-40 -left-2"/>
                 <h1 className="text-[#1d2226] text-[28px] font-semibold tracking-tight  pb-7 leading-9">Create your<br /> PopX account</h1>
                 <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
                     <div className="flex flex-col relative" >
@@ -157,8 +159,15 @@ const Signup = () => {
                             </label>
                         </div>
                     </div>
-                    <button type="submit" className="bg-[#6c25ff] text-[#ffffff] px-19 py-[11.5px] text-[15px] rounded-md mt-47 mb-8 border-none font-medium tracking-normal cursor-pointer active:scale-95 hover:bg-[#5125ffc2] transition-all duration-300 ">Create Account</button>
+                    <button type="submit" className="bg-[#6c25ff] text-[#ffffff] px-19 py-[11.5px] text-[15px] rounded-md mt-47 mb-2 border-none font-medium tracking-normal cursor-pointer active:scale-95 hover:bg-[#5125ffc2] transition-all duration-300 relative overflow-hidden group ">
+                        <span className="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                            <span className="w-full h-full block animate-gradientMove rounded-md" />
+                        </span>
+                        <span className="relative z-10">Create Account</span></button>
                 </form>
+                <div className="text-center ">
+                    <p className="text-[#1d2226] text-sm pb-4">Already have an account? <span onClick={() => navigate("/login")} className="text-[#6c25ff] font-semibold cursor-pointer">Login</span></p>
+                </div>
             </div>
         </div>
     )
