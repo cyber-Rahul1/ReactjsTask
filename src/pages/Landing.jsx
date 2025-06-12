@@ -11,8 +11,8 @@ const Landing = () => {
     })
 
     return (
-        <div className="w-screen h-screen bg-[#ffffff] flex flex-col justify-center items-center">
-            <div className="md:bg-[#f7f8f9] h-[96vh] md:h-[89vh] flex flex-col justify-end py-7 md:py-10 px-auto md:px-5">
+        <div className="w-screen h-[90vh] bg-[#ffffff] flex flex-col justify-center items-center">
+            <div className="md:bg-[#f7f8f9] h-[96%] md:h-[89%] flex flex-col justify-end py-7 md:py-10 px-auto md:px-5">
                 <div>
                     <h1 className="text-[#1d2226] text-[28px] font-semibold pb-1 tracking-tight">Welcome to PopX</h1>
                     <p className="text-[#76797d] text-md font-medium tracking-wide leading-[25px]">Lorem ipsum dolor sit amet,<br /> consectetur adipisicing elit.</p>
