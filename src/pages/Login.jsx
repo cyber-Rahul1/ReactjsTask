@@ -16,8 +16,8 @@ const Login = () => {
 
     return (
         <div className="w-screen h-screen bg-[#ffffff] flex flex-col justify-center items-center">
-            <div className="px-auto md:bg-[#f7f8f9] h-[96vh] md:h-[89vh] flex flex-col justify-start py-10 md:px-5">
-                <IoIosArrowBack  size={22} onClick={() => navigate("/")} className="absolute cursor-pointer text-gray-500 top-3 md:left-150 md:top-14 left-2"/>
+            <div className="px-auto relative md:bg-[#f7f8f9] h-[96vh] md:h-[89vh] flex flex-col justify-start py-10 md:px-5">
+                <IoIosArrowBack  size={22} onClick={() => navigate("/")} className="absolute cursor-pointer text-gray-500 top-1 md:-left-30 md:top-1 -left-2"/>
                 <div>
                     <h1 className="text-[#1d2226] text-[28px] font-semibold pb-2 tracking-tight leading-9">Signin to your<br /> PopX account</h1>
                     <p className="text-[#76797d] text-md font-medium tracking-normal leading-[27px]">Lorem ipsum dolor sit amet,<br /> consectetur adipisicing elit.</p>
