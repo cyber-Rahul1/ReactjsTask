@@ -21,12 +21,15 @@ const Account = () => {
                     <h3 className="text-[18px]">Account Settings</h3>
                 </div>
                 <div className=" bg-[#f7f8f9] h-[96vh] gap-7 md:h-[82vh] flex flex-col justify-start py-8 px-4 md:px-5">
-                    <div className="flex gap-4 relative">
-                        <div className=" z-2 flex flex-col items-center h-20 w-20 rounded-full overflow-hidden" >
-                            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" className="h-full w-full object-cover" />
-                            <div className="absolute bottom-1 right-65 md:right-64 z-20 ">
-                                <FaCamera size={22} className="cursor-pointer text-[#ffffff] bg-[#6c25ff] rounded-full p-1" />
+                    <div className="flex gap-4 ">
+                        <div className=" z-2 flex flex-col items-center h-20 w-20 rounded-full " >
+                            <div className="relative h-full w-full">
+                                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" className="rounded-full h-full w-full object-cover" />
+                                <div className="absolute bottom-1 right-0 z-20 ">
+                                    <FaCamera size={22} className="cursor-pointer text-[#ffffff] bg-[#6c25ff] rounded-full p-1" />
+                                </div>
                             </div>
+                            
 
                         </div>
                         <div className="flex flex-col gap-1">

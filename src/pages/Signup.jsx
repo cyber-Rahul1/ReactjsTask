@@ -110,7 +110,7 @@ const Signup = () => {
                 <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
                     <div className="flex flex-col relative" >
                         <input required value={fullName} onChange={(e) => setFullName(e.target.value)} ref={inputRef1} type="text" className="mb-4 border-1 border-[#cbcbcb] rounded-[6px] w-84 px-4 py-[9px] focus:outline-none text-sm text-[#1d2226]" />
-                        <p onClick={() => inputRef1.current.focus()} className={`${fullName ? '-top-[10px] font-medium text-[#722fff] text-[12px] rounded-sm bg-[#f7f8f9] pr-6 pl-[6px] left-2' : 'top-[10px] left-4'} text-[#1d2226be] text-sm absolute  transition-all duration-200 ease-in-out`}>Full Name<span className="text-red-600">*</span></p>
+                        <p onClick={() => inputRef1.current.focus()} className={`${fullName ? '-top-[10px] font-medium text-[#722fff] text-[12px] rounded-sm bg-white md:bg-[#f7f8f9] pr-6 pl-[6px] left-2' : 'top-[10px] left-4'} text-[#1d2226be] text-sm absolute  transition-all duration-200 ease-in-out`}>Full Name<span className="text-red-600">*</span></p>
                     </div>
                     <div className="flex flex-col relative pb-3" >
                         <input
@@ -122,7 +122,7 @@ const Signup = () => {
                             type="tel"
                             className={`mb-1 border-1 ${phoneError ? 'border-red-500' : 'border-[#cbcbcb]'} rounded-[6px] w-84 px-4 py-[9px] focus:outline-none text-sm text-[#1d2226]`}
                         />
-                        <p onClick={() => inputRef2.current.focus()} className={`${phoneNumber ? '-top-[10px] font-medium text-[#722fff] text-[12px] rounded-sm bg-[#f7f8f9] pr-6 pl-[6px] left-2' : 'top-[10px] left-4'} text-[#1d2226be] text-sm absolute  transition-all duration-200 ease-in-out`}>Phone number<span className="text-red-600">*</span></p>
+                        <p onClick={() => inputRef2.current.focus()} className={`${phoneNumber ? '-top-[10px] font-medium text-[#722fff] text-[12px] rounded-sm bg-white md:bg-[#f7f8f9] pr-6 pl-[6px] left-2' : 'top-[10px] left-4'} text-[#1d2226be] text-sm absolute  transition-all duration-200 ease-in-out`}>Phone number<span className="text-red-600">*</span></p>
                         {phoneError && <span className="text-red-500 text-xs">{phoneError}</span>}
                     </div>
                     <div className="flex flex-col relative pb-3" >
@@ -135,16 +135,16 @@ const Signup = () => {
                             type="email"
                             className={`mb-1 border-1 ${emailError ? 'border-red-500' : 'border-[#cbcbcb]'} rounded-[6px] w-84 px-4 py-[9px] focus:outline-none text-sm text-[#1d2226]`}
                         />
-                        <p onClick={() => inputRef3.current.focus()} className={`${email ? '-top-[10px] font-medium text-[#722fff] text-[12px] rounded-sm bg-[#f7f8f9] pr-6 pl-[6px] left-2' : 'top-[10px] left-4'} text-[#1d2226be] text-sm absolute  transition-all duration-200 ease-in-out`}>Email address<span className="text-red-600">*</span></p>
+                        <p onClick={() => inputRef3.current.focus()} className={`${email ? '-top-[10px] font-medium text-[#722fff] text-[12px] rounded-sm bg-white md:bg-[#f7f8f9] pr-6 pl-[6px] left-2' : 'top-[10px] left-4'} text-[#1d2226be] text-sm absolute  transition-all duration-200 ease-in-out`}>Email address<span className="text-red-600">*</span></p>
                         {emailError && <span className="text-red-500 text-xs ">{emailError}</span>}
                     </div>
                     <div className="flex flex-col relative" >
                         <input required value={password} onChange={(e) => setPassword(e.target.value)} ref={inputRef4} type="password" className="mb-4 border-1 border-[#cbcbcb] rounded-[6px] w-84 px-4 py-[9px] focus:outline-none text-sm text-[#1d2226]" />
-                        <p onClick={() => inputRef4.current.focus()} className={`${password ? '-top-[10px] font-medium text-[#722fff] text-[12px] rounded-sm bg-[#f7f8f9] pr-6 pl-[6px] left-2' : 'top-[10px] left-4'} text-[#1d2226be] text-sm absolute  transition-all duration-200 ease-in-out`}>Password<span className="text-red-600">*</span></p>
+                        <p onClick={() => inputRef4.current.focus()} className={`${password ? '-top-[10px] font-medium text-[#722fff] text-[12px] rounded-sm bg-white md:bg-[#f7f8f9] pr-6 pl-[6px] left-2' : 'top-[10px] left-4'} text-[#1d2226be] text-sm absolute  transition-all duration-200 ease-in-out`}>Password<span className="text-red-600">*</span></p>
                     </div>
                     <div className="flex flex-col relative" >
                         <input value={companyName} onChange={(e) => setCompanyName(e.target.value)} ref={inputRef5} type="text" className="mb-2 border-1 border-[#cbcbcb] rounded-[6px] w-84 px-4 py-[9px] focus:outline-none text-sm text-[#1d2226]" />
-                        <p onClick={() => inputRef5.current.focus()} className={`${companyName ? '-top-[10px] font-medium text-[#722fff] text-[12px] rounded-sm bg-[#f7f8f9] pr-6 pl-[6px] left-2' : 'top-[10px] left-4'} text-[#1d2226be] text-sm absolute  transition-all duration-200 ease-in-out`}>Company name</p>
+                        <p onClick={() => inputRef5.current.focus()} className={`${companyName ? '-top-[10px] font-medium text-[#722fff] text-[12px] rounded-sm bg-white md:bg-[#f7f8f9] pr-6 pl-[6px] left-2' : 'top-[10px] left-4'} text-[#1d2226be] text-sm absolute  transition-all duration-200 ease-in-out`}>Company name</p>
                     </div>
                     <div className="mb-4">
                         <p className="text-[#1d2226] mb-[10px] text-xs">Are you an Agency?<span className="text-red-600">*</span></p>
