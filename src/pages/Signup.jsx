@@ -123,7 +123,7 @@ const Signup = () => {
                             className={`mb-1 border-1 ${phoneError ? 'border-red-500' : 'border-[#cbcbcb]'} rounded-[6px] w-84 px-4 py-[9px] focus:outline-none text-sm text-[#1d2226]`}
                         />
                         <p onClick={() => inputRef2.current.focus()} className={`${phoneNumber ? '-top-[10px] font-medium text-[#722fff] text-[12px] rounded-sm bg-[#f7f8f9] pr-6 pl-[6px] left-2' : 'top-[10px] left-4'} text-[#1d2226be] text-sm absolute  transition-all duration-200 ease-in-out`}>Phone number<span className="text-red-600">*</span></p>
-                        {phoneError && <span className="text-red-500 text-xs mb-3">{phoneError}</span>}
+                        {phoneError && <span className="text-red-500 text-xs">{phoneError}</span>}
                     </div>
                     <div className="flex flex-col relative pb-3" >
                         <input
@@ -136,7 +136,7 @@ const Signup = () => {
                             className={`mb-1 border-1 ${emailError ? 'border-red-500' : 'border-[#cbcbcb]'} rounded-[6px] w-84 px-4 py-[9px] focus:outline-none text-sm text-[#1d2226]`}
                         />
                         <p onClick={() => inputRef3.current.focus()} className={`${email ? '-top-[10px] font-medium text-[#722fff] text-[12px] rounded-sm bg-[#f7f8f9] pr-6 pl-[6px] left-2' : 'top-[10px] left-4'} text-[#1d2226be] text-sm absolute  transition-all duration-200 ease-in-out`}>Email address<span className="text-red-600">*</span></p>
-                        {emailError && <span className="text-red-500 text-xs mb-3">{emailError}</span>}
+                        {emailError && <span className="text-red-500 text-xs ">{emailError}</span>}
                     </div>
                     <div className="flex flex-col relative" >
                         <input required value={password} onChange={(e) => setPassword(e.target.value)} ref={inputRef4} type="password" className="mb-4 border-1 border-[#cbcbcb] rounded-[6px] w-84 px-4 py-[9px] focus:outline-none text-sm text-[#1d2226]" />
@@ -159,7 +159,7 @@ const Signup = () => {
                             </label>
                         </div>
                     </div>
-                    <button type="submit" className="bg-[#6c25ff] text-[#ffffff] px-19 py-[11.5px] text-[15px] rounded-md mt-47 mb-2 border-none font-medium tracking-normal cursor-pointer active:scale-95 hover:bg-[#5125ffc2] transition-all duration-300 relative overflow-hidden group ">
+                    <button type="submit" className={`${(emailError || phoneError) ? 'mt-36' : 'mt-45'} bg-[#6c25ff] text-[#ffffff] px-19 py-[11.5px] text-[15px] rounded-md  mb-2 border-none font-medium tracking-normal cursor-pointer active:scale-95 hover:bg-[#5125ffc2] transition-all duration-300 relative overflow-hidden group `}>
                         <span className="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
                             <span className="w-full h-full block animate-gradientMove rounded-md" />
                         </span>
